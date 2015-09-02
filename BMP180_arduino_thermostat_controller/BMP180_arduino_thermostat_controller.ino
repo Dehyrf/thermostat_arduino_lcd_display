@@ -14,7 +14,7 @@
   please support Adafruit and open-source hardware by purchasing 
   products from Adafruit!
 
-  By: Dehyrf, based or libraries written by Limor Fried/Ladyada for Adafruit Industries.  
+  By: Dehyrf, based on libraries written by Limor Fried/Ladyada for Adafruit Industries.  
  ****************************************************/
 
 // Connect VCC of the BMP085 sensor to 3.3V (NOT 5.0V!)
@@ -23,7 +23,7 @@
 // Connect SDA to i2c data - on '168/'328 Arduino Uno/Duemilanove/etc thats Analog 4
 // EOC is not used, it signifies an end of conversion
 // XCLR is a reset pin, also not used here
-// Connect LCD to digital pins 12,11,5,4,3,2 (follow image in images folder but ignore the images
+// Connect LCD to digital pins 12,11,5,4,3,2 (follow image in images folder)
 // Connect relay to 5v, pin digital 13, and ground
 // Connect potentiometer to 5v, gnd, and analog pin 3
 
@@ -50,6 +50,7 @@ void loop() {
   float tempF = (9.0/5.0) * tempC + 32.0;
   float val = analogRead(poten);
   set_tempF = val/15 + 32;
+  
   if(tempF >= set_tempF && count >= 25){
     digitalWrite(relay, LOW);
   }
@@ -61,7 +62,6 @@ void loop() {
     count++;  
   }
    
-  
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print("Set Temp: ");
@@ -74,6 +74,7 @@ void loop() {
     lcd.print((char)223);
     lcd.print(" F");
     delay(175);
+    
     /*Serial.print("Temperature = ");
     Serial.print(bmp.readTemperature());
     Serial.println(" *C");
