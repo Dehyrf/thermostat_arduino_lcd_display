@@ -25,6 +25,7 @@
 // XCLR is a reset pin, also not used here
 // Connect LCD to digital pins 12,11,5,4,3,2 (follow image in images folder)
 // Connect relay to 5v, pin digital 13, and ground
+// Connect refrigeration unit positive line to normally open on the relay and its power to common
 // Connect potentiometer to 5v, gnd, and analog pin 3
 
 
