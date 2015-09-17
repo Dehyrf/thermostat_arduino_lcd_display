@@ -7,12 +7,6 @@
   ----> https://www.adafruit.com/products/391
   
   -Prereqs: BMP085 library and breakout, available from adafruit; LCD Display
-  
-  These displays use I2C to communicate, 2 pins are required to  
-  interface
-  Adafruit invests time and resources providing this open source code, 
-  please support Adafruit and open-source hardware by purchasing 
-  products from Adafruit!
 
   By: Dehyrf, based on libraries written by Limor Fried/Ladyada for Adafruit Industries.  
  ****************************************************/
